@@ -1,4 +1,5 @@
-import './style/index.css'
-import './style/index.less'
-import './style/index.scss'
+import './css/index.css'
+import './css/index.less'
+// import './css/index.scss'
 import './js/index.js'
+import './js/element.js'

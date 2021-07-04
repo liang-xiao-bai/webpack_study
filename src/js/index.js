@@ -4,5 +4,5 @@ const testFunc = ()=>{
 
 let myPromise = Promise.resolve()
 myPromise.then(res=>{
-    console.log('打包成功')
+    console.log('Promise')
 })

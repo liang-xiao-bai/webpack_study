@@ -1,3 +1,4 @@
 .css-test {
   color: yellow;
+  user-select: none;
 }
