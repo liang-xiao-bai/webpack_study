@@ -2,10 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 module.exports = {
-    entry: path.join(__dirname, '../src/index.js'),
-    output: {
-        path: path.join(__dirname, '../dist'),
-        filename: 'js/bundle.js'
+    entry: {
+        index:path.join(__dirname, '../src/index.js'),
+        other:path.join(__dirname, '../src/other.js'),
     },
     module: {
         rules: [
@@ -44,6 +43,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '../public/index.html'),
+            filename:'index.html',
+            chunks:['index'],
+            title: "webpack_study"
+        }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, '../public/other.html'),
+            filename:'other.html',
+            chunks:['other'],
             title: "webpack_study"
         }),
     ],
