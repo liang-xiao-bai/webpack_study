@@ -45,13 +45,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '../public/index.html'),
             filename:'index.html',
-            chunks:['index'],
+            chunks:['index','vendor','common'],
             title: "webpack_study"
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '../public/other.html'),
             filename:'other.html',
-            chunks:['other'],
+            chunks:['other','common'],
             title: "webpack_study"
         }),
         new MiniCssExtractPlugin({
