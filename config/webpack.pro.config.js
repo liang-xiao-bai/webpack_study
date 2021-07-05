@@ -6,7 +6,7 @@ const pro = require('./webpack.comm.config.js')
 module.exports = merge(pro,{
     mode: 'production',
     output: {
-        filename: '[name].[hash:8].js',
+        filename: 'js/[name].[hash:8].js',
         path: path.join(__dirname, '..', 'dist'),
     },
     plugins: [
